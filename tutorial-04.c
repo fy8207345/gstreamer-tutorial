@@ -11,7 +11,7 @@ typedef struct _CustomDataTimeSeekTime {
 
 static void handle_message(CustomDataSeekTime* data, GstMessage *msg);
 
-int main(int argc, char *argv[]) {
+int main04(int argc, char *argv[]) {
     CustomDataSeekTime data;
     GstBus *bus;
     GstMessage *msg;
@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
                 if(data.seek_enabled && !data.seek_done && current > 10 * GST_SECOND){
                     g_print ("\nReached 10s, performing seek...\n");
                     gst_element_seek_simple(data.playbin, GST_FORMAT_TIME,
-                            GST_SEEK_FLAG_FLUSH | GST_SEEK_FLAG_KEY_UNIT, 30 * GST_SECOND);
+                            GST_SEEK_FLAG_FLUSH | GST_SEEK_FLAG_ACCURATE, 30 * GST_SECOND);
                     data.seek_done = TRUE;
                 }
             }
