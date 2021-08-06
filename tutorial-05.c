@@ -99,7 +99,7 @@ static void slider_cb(GtkRange *range, CustomDataGUI *data) {
  * and registers the callbacks.
  */
 static void create_ui(CustomDataGUI *data) {
-    GtkWidget *main_window; //the uppermose window, containing all other windows
+    GtkWindow *main_window; //the uppermose window, containing all other windows
     GtkWidget *video_window; //the drawing area where the video will be shown
     GtkWidget *main_box; // Vbox to hold main_hbox and the controls
     GtkWidget *main_hbox; //Hbox to hold the video_window the stream info text widget
@@ -107,7 +107,7 @@ static void create_ui(CustomDataGUI *data) {
     GtkWidget *play_button, *pause_button, *stop_button;
 
     main_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    g_signal_connect(G_OBJECT(main_window), "delete_event", G_CALLBACK(delete_event_cb), data);
+    g_signal_connect(main_window, "delete-event", G_CALLBACK(delete_event_cb), NULL);
 
     video_window = gtk_drawing_area_new();
     gtk_widget_set_double_buffered(video_window, FALSE);
