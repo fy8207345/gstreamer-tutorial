@@ -306,7 +306,7 @@ static void application_cb (GstBus *bus, GstMessage *msg, CustomDataGUI *data) {
 }
 
 
-int main(int argc, char *argv[]) {
+int main05(int argc, char *argv[]) {
     CustomDataGUI data;
     GstStateChangeReturn ret;
     GstBus *bus;

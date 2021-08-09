@@ -18,4 +18,4 @@ link_directories(C:/gtk-build/gtk/Win32/release/lib)
 link_libraries(gstreamer-1.0.lib gobject-2.0.lib glib-2.0.lib gstvideo-1.0.lib cairo.lib cairo-gobject.lib)
 link_libraries(gdk-3.lib gtk-3.lib)
 
-add_executable(gstreamer_01 tutorial-05.c)
+add_executable(gstreamer_01 tutorial-06.c)
