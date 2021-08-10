@@ -52,7 +52,7 @@ static void cb_message(GstBus *bus, GstMessage *msg, CustomData12 *data) {
     }
 }
 
-int main(int argc, char *argv[]) {
+int main12(int argc, char *argv[]) {
     GstElement *pipeline;
     GstBus *bus;
     GstStateChangeReturn ret;
